@@ -1,47 +1,99 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="InventoryPOS">
+    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+    <meta name="author" content="Nafiur Rahman">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Login - Inventory Pos Admin</title>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/assets/img/favicon.png') }}">
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/fontawesome/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/fontawesome/css/all.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+</head>
+<body class="account-page">
+    <div id="global-loader">
+        <div class="whirly-loader"> </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="account-content">
+            <div class="login-wrapper login-new">
+                <div class="container">
+                    <div class="login-content user-login">
+                        <div class="login-logo">
+                            <img src="{{ asset('backend/assets/img/logo.png') }}" alt="img">
+                            <a href="index.html" class="login-logo logo-white">
+                                <img src="{{ asset('backend/assets/img/logo-white.png') }}" alt>
+                            </a>
+                        </div>
+                        <form action="{{ route('login') }}" method="POST">
+                            @csrf
+                            <div class="login-userset">
+                                <div class="login-userheading">
+                                    <h3>Sign In</h3>
+                                    <h4>Access the InventoryPOS Admin panel using your email and passcode.</h4>
+                                </div>
+                                <div class="form-login">
+                                    <label class="form-label">Email Address</label>
+                                    <div class="form-addons">
+                                        <input type="text" name="email" class="form-control">
+                                        <img src="{{ asset('backend/assets/img/icons/mail.svg') }}" alt="img">
+                                    </div>
+                                </div>
+                                <div class="form-login">
+                                    <label>Password</label>
+                                    <div class="pass-group">
+                                        <input type="password" name="password" class="pass-input">
+                                        <span class="fas toggle-password fa-eye-slash"></span>
+                                    </div>
+                                </div>
+                                <div class="form-login authentication-check">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <label class="checkboxs ps-4 mb-0 pb-0 line-height-1">
+                                                    <input type="checkbox" name="remember">
+                                                    <span class="checkmarks"></span>Remember me
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <a class="forgot-link" href="forgot-password-3.html">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-login">
+                                    <button class="btn btn-login" type="submit">Sign In</button>
+                                </div>
+                                <div class="signinform">
+                                    <h4>New on our platform?<a href="register-3.html" class="hover-a"> Create an account</a></h4>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
+                        <p>Copyright &copy; 2024 InventoryPOS. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+    <script src="{{ asset('backend/assets/js/jquery-3.7.1.min.js') }}" type="text/javascript"></script>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+    <script src="{{ asset('backend/assets/js/feather.min.js') }}" type="text/javascript"></script>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    <script src="{{ asset('backend/assets/js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/js/theme-script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/js/script.js') }}" type="text/javascript"></script>
+</body>
+</html>
