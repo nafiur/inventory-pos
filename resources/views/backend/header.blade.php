@@ -259,7 +259,12 @@
                     <a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="user"></i> My Profile</a>
                     <a class="dropdown-item" href="general-settings.html"><i class="me-2" data-feather="settings"></i>Settings</a>
                     <hr class="m-0">
-                    <a class="dropdown-item logout pb-0" href="signin.html"><img src="{{ asset('backend/assets/img/icons/log-out.svg') }}" class="me-2" alt="img">Logout</a>
+
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="dropdown-item" type="submit"><i class="me-2" data-feather="log-out"></i>Logout</button>
+                    </form>
+
                 </div>
             </div>
         </li>
@@ -271,7 +276,10 @@
         <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="profile.html">My Profile</a>
             <a class="dropdown-item" href="general-settings.html">Settings</a>
-            <a class="dropdown-item" href="signin.html">Logout</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button class="dropdown-item" type="submit"><i class="me-2" data-feather="log-out"></i>Logout</button>
+            </form>
         </div>
     </div>
 
