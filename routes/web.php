@@ -18,6 +18,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'Dashboard'])->name('dashboard');
     Route::get('/sales-dashboard', [DashboardController::class, 'SalesDashboard'])->name('sales.dashboard');
     Route::get('/products', [DashboardController::class, 'Products'])->name('products');
+    Route::get('/create-product', [DashboardController::class, 'CreateProduct'])->name('create.product');
 });
 
 Route::middleware('auth')->group(function () {

@@ -27,6 +27,11 @@ class DashboardController extends Controller
 
         return view('backend.pages.products');
     }
+    public function CreateProduct()
+    {
+
+        return view('backend.pages.product_create');
+    }
 
 
 

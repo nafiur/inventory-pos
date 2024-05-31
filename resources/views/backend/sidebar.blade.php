@@ -40,7 +40,7 @@
                     <h6 class="submenu-hdr">Inventory</h6>
                     <ul>
                         <li class="{{ request()->routeIs('products') ? 'active' : '' }}"><a href="{{ route('products') }}"><i data-feather="box"></i><span>Products</span></a></li>
-                        <li><a href="add-product.html"><i data-feather="plus-square"></i><span>Create Product</span></a></li>
+                        <li><a href="{{ route('create.product') }}"><i data-feather="plus-square"></i><span>Create Product</span></a></li>
                         <li><a href="expired-products.html"><i data-feather="codesandbox"></i><span>Expired Products</span></a></li>
                         <li><a href="low-stocks.html"><i data-feather="trending-down"></i><span>Low Stocks</span></a></li>
                         <li><a href="category-list.html"><i data-feather="codepen"></i><span>Category</span></a></li>

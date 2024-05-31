@@ -22,9 +22,6 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/fontawesome/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/fontawesome/css/all.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/select2/css/select2.min.css') }}">
-
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/summernote/summernote-bs4.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
@@ -32,6 +29,8 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/css/dataTables.bootstrap5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.5.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
 </head>
 <body>
     {{-- <div id="global-loader">
@@ -51,6 +50,8 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="{{ asset('backend/assets/plugins/select2/js/select2.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/js/jquery-3.7.1.min.js') }}" type="text/javascript"></script>
 
     <script src="{{ asset('backend/assets/js/feather.min.js') }}" type="text/javascript"></script>
@@ -65,7 +66,7 @@
     <script src="{{ asset('backend/assets/plugins/sweetalert/sweetalert2.all.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/plugins/sweetalert/sweetalerts.min.js') }}" type="text/javascript"></script>
 
-    <script src="{{ asset('backend/assets/plugins/select2/js/select2.min.js') }}" type="text/javascript"></script>
+
     <script src="{{ asset('backend/assets/plugins/summernote/summernote-bs4.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/js/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
 
@@ -84,5 +85,12 @@
 
     <script src="{{ asset('backend/assets/js/theme-script.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/js/script.js') }}" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.select').select2();
+        });
+
+    </script>
+
 </body>
 </html>
