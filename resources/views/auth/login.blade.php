@@ -74,7 +74,7 @@
                                     <button class="btn btn-login" type="submit">Sign In</button>
                                 </div>
                                 <div class="signinform">
-                                    <h4>New on our platform?<a href="register-3.html" class="hover-a"> Create an account</a></h4>
+                                    <h4>New on our platform?<a href="{{ route('register') }}" class="hover-a"> Create an account</a></h4>
                                 </div>
 
                             </div>
