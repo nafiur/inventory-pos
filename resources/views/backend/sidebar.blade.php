@@ -529,10 +529,10 @@
                     <li class="submenu">
                         <a href="javascript:void(0);" class="active"><span>Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                            <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                            <li>
                                 <a href="{{ route('dashboard') }}">Admin Dashboard</a>
                             </li>
-                            <li class="{{ request()->routeIs('sales.dashboard') ? 'active' : '' }}">
+                            <li>
                                 <a href="{{ route('sales.dashboard') }}">Sales Dashboard</a>
                             </li>
 
@@ -932,10 +932,10 @@
                     <li class="submenu">
                         <a href="javascript:void(0);" class="active subdrop"><span>Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                            <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                            <li>
                                 <a href="{{ route('dashboard') }}">Admin Dashboard</a>
                             </li>
-                            <li class="{{ request()->routeIs('sales.dashboard') ? 'active' : '' }}">
+                            <li>
                                 <a href="{{ route('sales.dashboard') }}">Sales Dashboard</a>
                             </li>
 

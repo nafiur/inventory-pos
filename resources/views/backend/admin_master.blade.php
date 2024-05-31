@@ -92,5 +92,19 @@
 
     </script>
 
+    <script>
+        $(document).ready(function() {
+            // Other initializations...
+
+            // Initialize DateTimePicker
+            if ($('.datetimepicker').length > 0) {
+                $('.datetimepicker').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm:ss'
+                });
+            }
+        });
+
+    </script>
+
 </body>
 </html>
