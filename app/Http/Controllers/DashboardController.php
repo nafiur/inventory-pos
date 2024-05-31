@@ -14,7 +14,12 @@ class DashboardController extends Controller
 
         $user = User::find($id);
 
-        return view('backend.admin_master', compact('user'));
+        return view('backend.index', compact('user'));
+    }
+    public function SalesDashboard()
+    {
+
+        return view('backend.index_sales');
     }
 
 

@@ -8,8 +8,8 @@
                         <li class="submenu">
                             <a href="javascript:void(0);" class="subdrop active"><i data-feather="grid"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="index.html" class="active">Admin Dashboard</a></li>
-                                <li><a href="sales-dashboard.html">Sales Dashboard</a></li>
+                                <li><a href="{{ route('dashboard') }}" class="active">Admin Dashboard</a></li>
+                                <li><a href="{{ route('sales.dashboard') }}">Sales Dashboard</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
