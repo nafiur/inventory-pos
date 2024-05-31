@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 @section('content')
 @section('title')
-{{ 'Dashboard' }}
+{{ 'Products' }}
 @endsection
 <div class="content">
     <div class="content">

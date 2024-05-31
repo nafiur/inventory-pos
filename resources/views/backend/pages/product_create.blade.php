@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 @section('content')
 @section('title')
-{{ 'Dashboard' }}
+{{ 'Create Products' }}
 @endsection
 <div class="content">
     <div class="content">
@@ -15,7 +15,7 @@
             <ul class="table-top-head">
                 <li>
                     <div class="page-btn">
-                        <a href="product-list.html" class="btn btn-secondary"><i data-feather="arrow-left" class="me-2"></i>Back to Product</a>
+                        <a href="{{ route('products') }}" class="btn btn-secondary"><i data-feather="arrow-left" class="me-2"></i>Back to Product</a>
                     </div>
                 </li>
                 <li>
@@ -23,7 +23,6 @@
                 </li>
             </ul>
         </div>
-
         <form action="add-product.html">
             <div class="card">
                 <div class="card-body add-product pb-0">
@@ -305,11 +304,11 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="phone-img">
-                                                                            <img src="assets/img/products/phone-add-2.png" alt="image">
+                                                                            <img src="{{ asset('backend/assets/img/products/phone-add-2.png') }}" alt="image">
                                                                             <a href="javascript:void(0);"><i data-feather="x" class="x-square-add remove-product"></i></a>
                                                                         </div>
                                                                         <div class="phone-img">
-                                                                            <img src="assets/img/products/phone-add-1.png" alt="image">
+                                                                            <img src="{{ asset('backend/assets/img/products/phone-add-1.png') }}" alt="image">
                                                                             <a href="javascript:void(0);"><i data-feather="x" class="x-square-add remove-product"></i></a>
                                                                         </div>
                                                                     </div>
@@ -778,7 +777,7 @@
                                     <div class="image-upload download">
                                         <input type="file">
                                         <div class="image-uploads">
-                                            <img src="assets/img/download-img.png" alt="img">
+                                            <img src="{{ asset('backend/assets/img/download-img.png') }}" alt="img">
                                             <h4>Drag and drop a <span>file to upload</span></h4>
                                         </div>
                                     </div>
@@ -788,11 +787,11 @@
                                         <div class="col-lg-12">
                                             <div class="add-choosen mb-3">
                                                 <div class="phone-img ms-0">
-                                                    <img src="assets/img/products/phone-add-2.png" alt="image">
+                                                    <img src="{{ asset('backend/assets/img/products/phone-add-2.png') }}" alt="image">
                                                     <a href="javascript:void(0);"><i data-feather="x" class="x-square-add remove-product"></i></a>
                                                 </div>
                                                 <div class="phone-img">
-                                                    <img src="assets/img/products/phone-add-1.png" alt="image">
+                                                    <img src="{{ asset('backend/assets/img/products/phone-add-1.png') }}" alt="image">
                                                     <a href="javascript:void(0);"><i data-feather="x" class="x-square-add remove-product"></i></a>
                                                 </div>
                                             </div>
@@ -859,8 +858,19 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        // Other initializations...
 
+        // Initialize DateTimePicker
+        if ($('.datetimepicker').length > 0) {
+            $('.datetimepicker').datetimepicker({
+                format: 'YYYY-MM-DD HH:mm:ss'
+            });
+        }
+    });
 
-</div>
+</script>
+
 
 @endsection
