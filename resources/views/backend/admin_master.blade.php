@@ -23,6 +23,15 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/fontawesome/css/all.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/select2/css/select2.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/summernote/summernote-bs4.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/feather.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.5.css') }}">
 </head>
 <body>
     {{-- <div id="global-loader">
@@ -55,6 +64,23 @@
 
     <script src="{{ asset('backend/assets/plugins/sweetalert/sweetalert2.all.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/plugins/sweetalert/sweetalerts.min.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('backend/assets/plugins/select2/js/select2.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/summernote/summernote-bs4.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/js/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('backend/assets/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/js/dataTables.bootstrap5.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/js/moment.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.5.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-world-mill.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-ru-mill.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-us-aea.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-uk_countries-mill.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-in-mill.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/js/jvectormap.js') }}" type="text/javascript"></script>
 
     <script src="{{ asset('backend/assets/js/theme-script.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/js/script.js') }}" type="text/javascript"></script>

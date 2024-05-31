@@ -16,10 +16,16 @@ class DashboardController extends Controller
 
         return view('backend.index', compact('user'));
     }
+
     public function SalesDashboard()
     {
 
         return view('backend.index_sales');
+    }
+    public function Products()
+    {
+
+        return view('backend.pages.products');
     }
 
 
