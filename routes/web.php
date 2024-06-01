@@ -1,7 +1,9 @@
 <?php
 
+use App\Livewire\Unit\CreateUnit;
 use App\Livewire\Brand\CreateBrand;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UnitController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
@@ -33,6 +35,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
     Route::get('/brand/create', CreateBrand::class)->name('create.brand');
 
+
+
+    Route::controller(UnitController::class)->group(function () {
+        Route::get('/unit', 'Index')->name('unit.index');
+    });
+    Route::get('/unit/create', CreateUnit::class)->name('create.unit');
 
 });
 

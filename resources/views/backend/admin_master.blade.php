@@ -7,8 +7,7 @@
     <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
     <meta name="author" content="Nafiur Rahman">
     <meta name="robots" content="noindex, nofollow">
-    <title>Inventory With POS</title>
-
+    <title>@yield('title'){{ '| Inventory With POS' }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/assets/img/favicon.png') }}">
 
     <link rel="stylesheet" href="{{ asset('backend/assets/css/bootstrap.min.css') }}">
