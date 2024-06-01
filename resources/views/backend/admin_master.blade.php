@@ -45,9 +45,9 @@
 
         @include('backend.sidebar')
 
-        <div class="flash-messages">
+        {{-- <div class="flash-messages">
             @phpflasher_render
-        </div>
+        </div> --}}
         @yield('content')
 
 
