@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
 
     <link rel="stylesheet" href="{{ asset('backend/assets/css/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/plugins/toastr/toatr.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.5.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -43,6 +44,10 @@
         @include('backend.header')
 
         @include('backend.sidebar')
+
+        <div class="flash-messages">
+            @phpflasher_render
+        </div>
         @yield('content')
 
 
@@ -84,6 +89,8 @@
 
     <script src="{{ asset('backend/assets/js/theme-script.js') }}" type="text/javascript"></script>
     <script src="{{ asset('backend/assets/js/script.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/toastr/toastr.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/assets/plugins/toastr/toastr.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('.select').select2();

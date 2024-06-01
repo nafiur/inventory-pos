@@ -32,7 +32,8 @@ class CreateBrand extends Component
             'status' => $this->status,
         ]);
 
-        session()->flash('message', 'Brand created successfully.');
+        // session()->flash('message', 'Brand created successfully.');
+        flash()->success('Brand created successfully!');
 
         // Optionally reset the form
         $this->reset(['name', 'logo', 'status']);
