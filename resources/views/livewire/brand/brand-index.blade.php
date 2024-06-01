@@ -17,7 +17,7 @@
                     <td><span class="badge badge-linesuccess">{{ $brand->status ? 'Active' : 'Inactive' }}</span></td>
                     <td class="action-table-data">
                         <div class="edit-delete-action">
-                            <a class="me-2 p-2" href="#" wire:click.prevent="$emit('editBrand', {{ $brand->id }})">
+                            <a class="me-2 p-2" href="#" wire:click.prevent="$emit('editBrand', {{ $brand->id }})" data-bs-toggle="modal" data-bs-target="#edit-brand">
                                 <i data-feather="edit" class="feather-edit"></i>
                             </a>
                             <a class="confirm-text p-2" href="#" wire:click.prevent="deleteBrand({{ $brand->id }})">
@@ -53,6 +53,20 @@
         });
 
     </script>
+    <script>
+        document.addEventListener('livewire:load', function() {
+            window.livewire.on('editBrand', (brandId) => {
+                // Call the Livewire method to load the brand details into the modal
+                Livewire.emit('loadEditBrandModal', brandId);
+                // Show the modal
+                $('#edit-brand').modal('show');
+            });
 
+            window.livewire.on('hide-edit-brand-modal', () => {
+                $('#edit-brand').modal('hide');
+            });
+        });
+
+    </script>
 
 </div>

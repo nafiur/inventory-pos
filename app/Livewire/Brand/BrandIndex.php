@@ -13,7 +13,7 @@ class BrandIndex extends Component
 
     public function mount()
     {
-        $this->brands = Brand::all();
+        $this->brands = Brand::orderBy('id', 'desc')->get();
     }
 
     public function refreshDatatable()

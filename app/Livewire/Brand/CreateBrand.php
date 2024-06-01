@@ -39,6 +39,8 @@ class CreateBrand extends Component
 
         // Optionally reset the form
         $this->reset(['name', 'logo', 'status']);
+
+        $this->dispatch('create-brand');
     }
 
 

@@ -14,6 +14,7 @@ class EditBrand extends Component
     public $name;
     public $logo;
     public $status;
+    public $editBrandId;
 
     protected $listeners = ['editBrand'];
 
@@ -57,6 +58,15 @@ class EditBrand extends Component
     }
 
 
+
+    public function loadEditBrandModal($brandId)
+    {
+        // Set the editBrandId property to the provided brand ID
+        $this->editBrandId = $brandId;
+
+        // Emit the editBrand event with the brand ID as payload
+        $this->emit('editBrand', $brandId);
+    }
     public function render()
     {
         return view('livewire.brand.edit-brand');

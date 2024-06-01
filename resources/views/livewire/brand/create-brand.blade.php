@@ -1,5 +1,5 @@
 <div>
-    <div class="modal fade" id="add-brand" wire:ignore.self>
+    <div wire:ignore.self class="modal fade" id="add-brand">
         <div class="modal-dialog modal-dialog-centered custom-modal-two">
             <div class="modal-content">
                 <div class="page-wrapper-new p-0">
@@ -22,7 +22,11 @@
                                 <label class="form-label">Logo</label>
                                 <div class="profile-pic-upload mb-3">
                                     <div class="profile-pic brand-pic">
+                                        @if ($logo)
+                                        <img src="{{ $logo->temporaryUrl() }}">
+                                        @else
                                         <span><i data-feather="plus-circle" class="plus-down-add"></i> Add Image</span>
+                                        @endif
                                     </div>
                                     <div class="image-upload mb-0">
                                         <input type="file" wire:model="logo">
@@ -35,8 +39,8 @@
                                 <div class="mb-0">
                                     <div class="status-toggle modal-status d-flex justify-content-between align-items-center">
                                         <span class="status-label">Status</span>
-                                        <input type="checkbox" id="user2" class="check" wire:model="status">
-                                        <label for="user2" class="checktoggle"></label>
+                                        <input type="checkbox" id="status" class="check" wire:model="status">
+                                        <label for="status" class="checktoggle"></label>
                                     </div>
                                     @error('status') <span class="error">{{ $message }}</span> @enderror
                                 </div>
@@ -52,3 +56,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('livewire:load', function() {
+        window.livewire.on('hide-add-brand-modal', () => {
+            $('#add-brand').modal('hide');
+        });
+    });
+
+</script>
