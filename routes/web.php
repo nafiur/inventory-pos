@@ -1,6 +1,8 @@
 <?php
 
+use App\Livewire\Brand\CreateBrand;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 
@@ -19,6 +21,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/sales-dashboard', [DashboardController::class, 'SalesDashboard'])->name('sales.dashboard');
     Route::get('/products', [DashboardController::class, 'Products'])->name('products');
     Route::get('/create-product', [DashboardController::class, 'CreateProduct'])->name('create.product');
+
+
+
+
+    Route::controller(BrandController::class)->group(function () {
+        Route::get('/brand', 'Index')->name('brand.index');
+
+
+
+    });
+    Route::get('/brand/create', CreateBrand::class)->name('create.brand');
+
+
 });
 
 Route::middleware('auth')->group(function () {
