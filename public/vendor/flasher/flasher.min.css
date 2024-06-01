@@ -305,8 +305,7 @@ html.fl-dark .fl-flasher {
     padding: .75em;
     position: relative;
     word-break: break-word;
-    margin-top: 90px;
-    /* Add your desired margin-top value here */
+    margin-top: 80px;
 }
 
 .fl-flasher.fl-rtl {
