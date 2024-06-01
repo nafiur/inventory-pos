@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.5.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+    @livewireStyles
 </head>
 <body>
     {{-- <div id="global-loader">
@@ -103,6 +104,6 @@
         });
 
     </script>
-
+    @livewireScripts
 </body>
 </html>
