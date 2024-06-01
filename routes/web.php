@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Unit\EditUnit;
 use App\Livewire\Unit\CreateUnit;
 use App\Livewire\Brand\CreateBrand;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/unit', 'Index')->name('unit.index');
     });
     Route::get('/unit/create', CreateUnit::class)->name('create.unit');
+    Route::get('/unit/edit/{unitId}', EditUnit::class)->name('edit.unit');
 
 });
 
