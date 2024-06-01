@@ -16,6 +16,7 @@
         "phpoffice/phpspreadsheet": "^1.29",
         "phpoffice/phpword": "^1.2",
         "power-components/livewire-powergrid": "^5.7",
+        "spatie/image": "^3.6",
         "spatie/image-optimizer": "^1.7",
         "spatie/laravel-activitylog": "^4.8",
         "spatie/laravel-backup": "^8.8",
