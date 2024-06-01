@@ -42,10 +42,8 @@
         @include('backend.header')
 
         @include('backend.sidebar')
+        @yield('content')
 
-        <div class="page-wrapper">
-            @yield('content')
-        </div>
 
     </div>
 
