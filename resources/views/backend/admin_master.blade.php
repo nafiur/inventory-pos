@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/css/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.5.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
     @livewireStyles
 </head>
