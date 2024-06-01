@@ -13,10 +13,10 @@
                 <td>{{ $unit->name }}</td>
                 <td>{{ $unit->short_name }}</td>
                 <td>
-                    <a href="{{ route('edit.unit', $unit->id) }}" class="me-2 p-2">
+                    <a href="{{ route('edit.unit', $unit->id) }}" wire:navigate class="me-2 p-2">
                         <i data-feather="edit" class="feather-edit"></i>
                     </a>
-                    <a href="{{ route('delete.unit', $unit->id) }}" class="p-2" wire:click.prevent="confirmDelete({{ $unit->id }})">
+                    <a href="#" class="p-2" wire:click.prevent="confirmDelete({{ $unit->id }})">
                         <i data-feather="trash-2" class="feather-trash-2"></i>
                     </a>
                 </td>
