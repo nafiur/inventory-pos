@@ -71,33 +71,33 @@
             </div>
         </li>
 
-
+        {{--
         <li class="nav-item dropdown has-arrow main-drop select-store-dropdown">
             <a href="javascript:void(0);" class="dropdown-toggle nav-link select-store" data-bs-toggle="dropdown">
                 <span class="user-info">
                     <span class="user-letter">
                         <img src="{{ asset('backend/assets/img/store/store-01.png') }}" alt="Store Logo" class="img-fluid">
-                    </span>
-                    <span class="user-detail">
-                        <span class="user-name">Select Store</span>
-                    </span>
-                </span>
+        </span>
+        <span class="user-detail">
+            <span class="user-name">Select Store</span>
+        </span>
+        </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <a href="javascript:void(0);" class="dropdown-item">
+                <img src="{{ asset('backend/assets/img/store/store-01.png') }}" alt="Store Logo" class="img-fluid"> Grocery Alpha
             </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="{{ asset('backend/assets/img/store/store-01.png') }}" alt="Store Logo" class="img-fluid"> Grocery Alpha
-                </a>
-                <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="{{ asset('backend/assets/img/store/store-02.png') }}" alt="Store Logo" class="img-fluid"> Grocery Apex
-                </a>
-                <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="{{ asset('backend/assets/img/store/store-03.png') }}" alt="Store Logo" class="img-fluid"> Grocery Bevy
-                </a>
-                <a href="javascript:void(0);" class="dropdown-item">
-                    <img src="{{ asset('backend/assets/img/store/store-04.png') }}" alt="Store Logo" class="img-fluid"> Grocery Eden
-                </a>
-            </div>
-        </li>
+            <a href="javascript:void(0);" class="dropdown-item">
+                <img src="{{ asset('backend/assets/img/store/store-02.png') }}" alt="Store Logo" class="img-fluid"> Grocery Apex
+            </a>
+            <a href="javascript:void(0);" class="dropdown-item">
+                <img src="{{ asset('backend/assets/img/store/store-03.png') }}" alt="Store Logo" class="img-fluid"> Grocery Bevy
+            </a>
+            <a href="javascript:void(0);" class="dropdown-item">
+                <img src="{{ asset('backend/assets/img/store/store-04.png') }}" alt="Store Logo" class="img-fluid"> Grocery Eden
+            </a>
+        </div>
+        </li> --}}
 
 
         <li class="nav-item dropdown has-arrow flag-nav nav-item-box">
@@ -120,6 +120,11 @@
             </div>
         </li>
 
+        <li class="nav-item nav-item-box">
+            <a href="{{ route('pos.index') }}" wire:navigate>
+                <i data-feather="package"></i>
+            </a>
+        </li>
         <li class="nav-item nav-item-box">
             <a href="javascript:void(0);" id="btnFullscreen">
                 <i data-feather="maximize"></i>
