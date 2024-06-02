@@ -29,6 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
 
+
+
+});
+
+Route::middleware('auth')->group(function () {
     Route::controller(BrandController::class)->group(function () {
         Route::get('/brand', 'Index')->name('brand.index');
     });
@@ -46,8 +51,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(PosController::class)->group(function () {
         Route::get('/pos', 'Index')->name('pos.index');
     });
-
 });
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
