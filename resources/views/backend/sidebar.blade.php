@@ -113,7 +113,7 @@
                 <ul>
                     <li><a href="employees-grid.html"><i data-feather="user"></i><span>Employees</span></a></li>
                     <li><a href="department-grid.html"><i data-feather="users"></i><span>Departments</span></a></li>
-                    <li><a href="designation.html"><i data-feather="git-merge"></i><span>Designation</span></a></li>
+                    <li><a href="{{ route('designation.index') }}" wire:navigate><i data-feather="git-merge"></i><span>Designation</span></a></li>
                     <li><a href="shift.html"><i data-feather="shuffle"></i><span>Shifts</span></a></li>
                     <li class="submenu">
                         <a href="javascript:void(0);"><i data-feather="book-open"></i><span>Attendence</span><span class="menu-arrow"></span></a>

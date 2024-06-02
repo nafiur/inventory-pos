@@ -4,6 +4,7 @@ use App\Livewire\Unit\EditUnit;
 use App\Livewire\Unit\CreateUnit;
 use App\Livewire\Brand\CreateBrand;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Hrm\DesignationIndex;
 use App\Http\Controllers\PosController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\BrandController;
@@ -51,6 +52,21 @@ Route::middleware('auth')->group(function () {
     Route::controller(PosController::class)->group(function () {
         Route::get('/pos', 'Index')->name('pos.index');
     });
+});
+
+
+
+Route::middleware('auth')->group(function () {
+
+
+    Route::get('/hrm/designation', DesignationIndex::class)->name('designation.index');
+
+
+
+
+
+
+
 });
 
 
