@@ -109,7 +109,6 @@
                                     </th>
                                     <th>Designation</th>
                                     <th>Members</th>
-                                    <th>Created On</th>
                                     <th>Total Members</th>
                                     <th>Status</th>
                                     <th class="no-sort">Action</th>
@@ -148,9 +147,7 @@
                                         </ul>
                                     </td>
                                     <td>07</td>
-                                    <td>
-                                        25 May 2023
-                                    </td>
+
                                     <td><span class="badge badge-linesuccess">Active</span></td>
                                     <td class="action-table-data">
                                         <div class="edit-delete-action">
