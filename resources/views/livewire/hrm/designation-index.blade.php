@@ -123,7 +123,7 @@
                                             <span class="checkmarks"></span>
                                         </label>
                                     </td>
-                                    <td>Designer</td>
+                                    <td>{{ $designation->name }}</td>
                                     <td>
                                         <ul class="team-members">
                                             <li>
