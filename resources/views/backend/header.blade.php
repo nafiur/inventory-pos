@@ -121,6 +121,11 @@
         </li>
 
         <li class="nav-item nav-item-box">
+            <a href="{{ route('dashboard') }}" wire:navigate>
+                <i data-feather="grid"></i>
+            </a>
+        </li>
+        <li class="nav-item nav-item-box">
             <a href="{{ route('pos.index') }}" wire:navigate>
                 <i data-feather="package"></i>
             </a>
