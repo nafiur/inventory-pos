@@ -115,6 +115,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($designations as $designation)
                                 <tr>
                                     <td>
                                         <label class="checkboxs">
@@ -163,7 +164,7 @@
                                         </div>
                                     </td>
                                 </tr>
-
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
