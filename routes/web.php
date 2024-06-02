@@ -6,6 +6,7 @@ use App\Livewire\Brand\CreateBrand;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Hrm\DesignationIndex;
 use App\Http\Controllers\PosController;
+use App\Livewire\Hrm\DesignationCreate;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
@@ -60,6 +61,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/hrm/designation', DesignationIndex::class)->name('designation.index');
+    Route::get('/hrm/designation/create', DesignationCreate::class)->name('designation.create');
 
 
 

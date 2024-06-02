@@ -8,8 +8,8 @@
             <div class="page-header">
                 <div class="add-item d-flex">
                     <div class="page-title">
-                        <h4>Brand</h4>
-                        <h6>Manage your brands</h6>
+                        <h4>Designation</h4>
+                        <h6>Manage Designation</h6>
                     </div>
                 </div>
                 <ul class="table-top-head">
@@ -30,7 +30,7 @@
                     </li>
                 </ul>
                 <div class="page-btn">
-                    <a href="{{ route('create.unit') }}" wire:navigate class="btn btn-added"><i data-feather="plus-circle" class="me-2"></i>Add Designation</a>
+                    <a href="{{ route('designation.create') }}" wire:navigate class="btn btn-added"><i data-feather="plus-circle" class="me-2"></i>Add Designation</a>
                 </div>
             </div>
 
