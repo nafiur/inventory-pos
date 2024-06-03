@@ -112,7 +112,7 @@
                 <h6 class="submenu-hdr">HRM</h6>
                 <ul>
                     <li><a href="employees-grid.html"><i data-feather="user"></i><span>Employees</span></a></li>
-                    <li><a href="department-grid.html"><i data-feather="users"></i><span>Departments</span></a></li>
+                    <li><a href="{{ route('department.index') }}" wire:navigate><i data-feather="users"></i><span>Departments</span></a></li>
                     <li><a href="{{ route('designation.index') }}" wire:navigate><i data-feather="git-merge"></i><span>Designation</span></a></li>
                     <li><a href="shift.html"><i data-feather="shuffle"></i><span>Shifts</span></a></li>
                     <li class="submenu">

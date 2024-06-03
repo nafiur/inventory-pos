@@ -1,9 +1,11 @@
 <?php
 
 use App\Livewire\Unit\EditUnit;
+use App\Livewire\Hrm\Department;
 use App\Livewire\Unit\CreateUnit;
 use App\Livewire\Brand\CreateBrand;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Hrm\DepartmentCreate;
 use App\Livewire\Hrm\DesignationIndex;
 use App\Http\Controllers\PosController;
 use App\Livewire\Hrm\DesignationCreate;
@@ -64,7 +66,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/hrm/designation/create', DesignationCreate::class)->name('designation.create');
 
 
-
+    Route::get('/hrm/department', Department::class)->name('department.index');
+    Route::get('/hrm/department/create', DepartmentCreate::class)->name('department.create');
 
 
 
