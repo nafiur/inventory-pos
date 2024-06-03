@@ -159,7 +159,7 @@
             <li class="submenu-open">
                 <h6 class="submenu-hdr">User Management</h6>
                 <ul>
-                    <li><a href="users.html"><i data-feather="user-check"></i><span>Users</span></a></li>
+                    <li><a href="{{ route('user.index') }}" wire:navigate><i data-feather="user-check"></i><span>Users</span></a></li>
                     <li><a href="roles-permissions.html"><i data-feather="shield"></i><span>Roles & Permissions</span></a></li>
                     <li><a href="delete-account.html"><i data-feather="lock"></i><span>Delete Account Request</span></a></li>
                 </ul>

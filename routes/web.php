@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\User;
 use App\Livewire\Unit\EditUnit;
 use App\Livewire\Hrm\Department;
 use App\Livewire\Unit\CreateUnit;
@@ -60,6 +61,11 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware('auth')->group(function () {
+
+
+    Route::get('/user', User::class)->name('user.index');
+
+
 
 
     Route::get('/hrm/designation', DesignationIndex::class)->name('designation.index');
